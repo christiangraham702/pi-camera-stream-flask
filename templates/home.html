@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+<style>
+body {
+  margin: 0;
+  font-family: 'Gruppo';font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 3%, rgba(0,0,0,1) 96%);
+}
+
+.room
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-right-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  
+  /* background: #0e1538; */
+}
+
+/* .top-right-logo .box {
+  border-radius: 15px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.top-right-logo .container
+{
+  position: relative;
+  width: 120%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.top-right-logo .container::before
+{
+  content: '';
+  position: absolute;
+  width: 180%;
+  height: 150%;
+  border-radius: 70%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 2s linear infinite;
+}
+.top-right-logo .container::after
+{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #0e1538;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100% 
+  {
+    transform: rotate(720deg);
+  }
+}
+
+.top-right-logo .container h3
+{
+  color: rgba(14, 107, 138, 0.5);
+  font-size: 4em;
+  z-index: 9;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  opacity:0.6;
+}
+
+.navbar a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+
+
+}
+
+.main .box
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  width: 68%;
+  height: 35.56%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.box img
+{
+  margin: auto;
+  padding-top: 2%;
+  z-index: 10;
+}
+
+img:hover
+{
+  transform: scale(1.2);
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+.camera-bg {
+  position: absolute;
+  display: block;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    margin: auto;
+}
+
+a 
+{
+  background: rgba(0,0,0,0);
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  z-index: 10;
+  position: absolute;
+}
+
+/* h3
+{
+  border: solid 2px red;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+} */
+
+
+</style>
+</head>
+
+<title>2208</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <div class="room">
+    <div class="top-right-logo">
+      <a href="/camera_page"></a>
+      <div class="box">
+        <span></span>
+        <div class="container">
+          <h3>2208</h3>
+        </div> 
+      </div>
+    </div>
+  </div>
